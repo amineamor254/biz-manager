@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('billing_cycle')->default('monthly'); // monthly, yearly
             
             // Plan features stored as JSON
-            $table->json('features')->default('{}');
+            $table->json('features')->nullable();
             
             $table->timestamps();
             $table->index('slug');
