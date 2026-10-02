@@ -1,3 +1,130 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(var(--color-neutral-100));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--color-neutral-300));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--color-neutral-400));
+}
+
+.sidebar-navigation {
+  scrollbar-color: rgba(148, 163, 184, 0.6) transparent;
+  scrollbar-width: thin;
+}
+
+.sidebar-navigation::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-navigation::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-navigation::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.6);
+  border-radius: 9999px;
+}
+
+.sidebar-navigation::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(203, 213, 225, 0.8);
+}
+
+
+
+ 
+
+  
+
+ 
+
+/* ===== ANIMATIONS ===== */
+@layer utilities {
+  /* Fade In Animation */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Slide Up Animation */
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Pulse */
+  .animate-pulse-soft {
+    animation: pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  /* Smooth Transitions */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
+/* ===== RESPONSIVE UTILITIES ===== */
+@layer utilities {
+  .mobile-only {
+    @apply block sm:hidden;
+  }
+
+  .desktop-only {
+    @apply hidden sm:block;
+  }
+
+  .gap-responsive {
+    @apply gap-4 sm:gap-5 md:gap-6;
+  }
+
+  .px-responsive {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .py-responsive {
+    @apply py-4 sm:py-6 lg:py-8;
+  }
+}
+

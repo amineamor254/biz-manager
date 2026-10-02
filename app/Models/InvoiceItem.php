@@ -1,6 +1,8 @@
 <?php
+// SaaS MVP - add workspace support
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Model;
 
 class InvoiceItem extends Model
@@ -9,11 +11,22 @@ class InvoiceItem extends Model
         'invoice_id',
         'product_id',
         'quantity',
-        'price',
+        'unit_price',
         'total',
     ];
 
-    public function product()
+    protected $casts = [
+        'quantity' => 'integer',
+        'unit_price' => 'decimal:2',
+        'total' => 'decimal:2',
+    ];
+
+    public function invoice(): BelongsTo
+    {
+        return $this->belongsTo(Invoice::class);
+    }
+
+    public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
     }

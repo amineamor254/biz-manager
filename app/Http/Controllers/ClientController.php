@@ -1,5 +1,5 @@
 <?php
-
+// SaaS MVP - add workspace support
 namespace App\Http\Controllers;
 
 use App\Models\Client;
