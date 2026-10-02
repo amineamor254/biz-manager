@@ -24,7 +24,7 @@ return new class extends Migration
             // User meta
             $table->string('verification_code')->nullable()->after('email_verified_at');
             $table->dateTime('last_login_at')->nullable()->after('remember_token');
-            $table->json('settings')->default('{}')->after('last_login_at'); // theme, preferences
+            $table->json('settings')->nullable()->after('last_login_at'); // theme, preferences
             
             $table->index('role');
             $table->index('current_workspace_id');
