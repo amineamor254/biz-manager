@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f8fafc">
     <meta name="description" content="BizManager brings clients, products, invoices, orders, expenses, and reports together in one workspace.">
-    <title>BizManager | Business, in better order</title>
+    <title>BizManager</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-white text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-100">

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Create account | {{ config('app.name', 'Business Manager') }}</title>
+    <title>Create account | {{ config('app.name', 'BizManager') }}</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -12,7 +13,7 @@
     <main class="flex min-h-screen items-center justify-center px-5 py-10 sm:px-8">
         <div class="w-full max-w-md">
             <div class="mb-8 flex items-center justify-between gap-3">
-                <a href="/" class="flex items-center gap-2.5" aria-label="Business Manager home">
+                <a href="/" class="flex items-center gap-2.5" aria-label="BizManager home">
                     <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm shadow-blue-600/20">
                         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <path d="M4.75 18.25V5.75h7.5a3.25 3.25 0 0 1 1.86 5.92 3.25 3.25 0 0 1-1.86 6.58h-7.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />

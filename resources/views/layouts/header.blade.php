@@ -76,7 +76,7 @@
 
             <div x-data="{ open: false }" class="relative">
                 <button type="button" @click="open = !open" @keydown.escape.window="open = false" :aria-expanded="open.toString()" aria-haspopup="true" aria-label="Language: English" class="inline-flex h-10 items-center gap-2 rounded-lg px-2.5 text-slate-700 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-slate-200 dark:hover:bg-slate-700 sm:px-3">
-                    <span class="text-base leading-none" aria-hidden="true">🇺🇸</span>
+                    <span class="inline-flex shrink-0 text-base leading-none" aria-hidden="true">🇺🇸</span>
                     <span class="hidden text-sm font-medium sm:inline">English</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="hidden h-4 w-4 text-slate-400 sm:block" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.17l3.71-3.94a.75.75 0 1 1 1.09 1.03l-4.25 4.5a.75.75 0 0 1-1.09 0l-4.25-4.5a.75.75 0 0 1 .02-1.05Z" clip-rule="evenodd" />
@@ -84,13 +84,13 @@
                 </button>
                 <div x-show="open" style="display: none" @click.away="open = false" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute right-0 mt-2 w-48 overflow-hidden rounded-lg border border-slate-200 bg-white p-1 shadow-lg dark:border-slate-700 dark:bg-slate-800">
                     <button type="button" aria-current="true" class="flex w-full items-center gap-3 rounded-md bg-blue-50 px-3 py-2.5 text-left text-sm font-medium text-blue-700 dark:bg-blue-500/10 dark:text-blue-300">
-                        <span aria-hidden="true">🇺🇸</span><span class="flex-1">English</span><span aria-hidden="true" class="text-blue-600 dark:text-blue-300">✓</span>
+                        <span class="inline-flex shrink-0" aria-hidden="true">🇺🇸</span><span class="flex-1">English</span><span aria-hidden="true" class="text-blue-600 dark:text-blue-300">✓</span>
                     </button>
                     <button type="button" class="flex w-full items-center gap-3 rounded-md px-3 py-2.5 text-left text-sm text-slate-700 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 dark:text-slate-200 dark:hover:bg-slate-700">
-                        <span aria-hidden="true">🇫🇷</span><span>Français</span>
+                        <span class="inline-flex shrink-0" aria-hidden="true">🇫🇷</span><span>Français</span>
                     </button>
                     <button type="button" class="flex w-full items-center gap-3 rounded-md px-3 py-2.5 text-left text-sm text-slate-700 transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-500 dark:text-slate-200 dark:hover:bg-slate-700">
-                        <span aria-hidden="true">🇹🇳</span><span>العربية</span>
+                        <span class="inline-flex shrink-0" aria-hidden="true">🇹🇳</span><span>العربية</span>
                     </button>
                 </div>
             </div>
