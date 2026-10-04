@@ -117,7 +117,7 @@
             const [whole, fraction = ''] = String(amount || '0').split('.');
             return (Number(whole) * 100) + Number((fraction + '00').slice(0, 2));
         };
-        const money = (value) => `${(value / 100).toFixed(2)} TND`;
+        const money = (value) => `${(value / 100).toFixed(2)} $`;
 
         function updateRows() {
             const rows = [...container.querySelectorAll('.invoice-item')];
@@ -139,7 +139,7 @@
                 quantity.name = `items[${index}][quantity]`;
                 if (itemId.value) itemId.name = `items[${index}][id]`;
                 quantity.max = stock || '';
-                row.querySelector('[data-unit-price]').value = price ? `${Number(price).toFixed(2)} TND` : '';
+                row.querySelector('[data-unit-price]').value = price ? `${Number(price).toFixed(2)} $` : '';
                 row.querySelector('[data-stock]').textContent = selected?.value ? `Available stock: ${stock}` : 'Choose a product';
                 row.querySelector('[data-line-total]').textContent = money(lineCents);
                 totalCents += lineCents;
