@@ -173,9 +173,7 @@
 
         <a href="{{ route('clients.index') }}" class="flex items-center justify-between px-4 py-3 rounded-xl transition {{ request()->routeIs('clients.*') ? 'bg-white/10 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }}">
             <div class="flex items-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.88 6.196"/>
-                </svg>
+                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 20v-1.5a4.5 4.5 0 0 0-4.5-4.5h-3A4.5 4.5 0 0 0 4 18.5V20m14-9a3 3 0 1 0-2.5-4.7M20 20v-1.5a4.5 4.5 0 0 0-3-4.25M13.5 7.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
                 <span>Clients</span>
             </div>
         </a>
