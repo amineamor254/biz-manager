@@ -23,7 +23,7 @@
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Permissions are limited to the current workspace.</p>
         </div>
         <div class="overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <table class="w-full min-w-[760px] text-left">
+            <table class="w-full text-left">
                 <thead class="bg-gray-50 dark:bg-gray-900/50">
                     <tr class="border-b border-gray-200 dark:border-gray-700">
                         <th class="px-5 py-3.5 text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400">Role</th>

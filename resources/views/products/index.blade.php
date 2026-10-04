@@ -44,7 +44,7 @@
                                 </div>
                                 <div>
                                     <p class="font-bold text-gray-900 dark:text-white text-sm">{{ $product->name }}</p>
-                                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Product ID: {{ str_pad($product->id, 4, '0', STR_PAD_LEFT) }}</p>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Product ID: {{ str_pad($products->count() - $loop->iteration + 1, 4, '0', STR_PAD_LEFT) }}</p>
                                 </div>
                             </div>
                         </td>
@@ -120,7 +120,7 @@
                             </div>
                             <div class="min-w-0">
                                 <p class="break-words font-bold text-gray-900 dark:text-white">{{ $product->name }}</p>
-                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Product ID: {{ str_pad($product->id, 4, '0', STR_PAD_LEFT) }}</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Product ID: {{ str_pad($products->count() - $loop->iteration + 1, 4, '0', STR_PAD_LEFT) }}</p>
                             </div>
                         </div>
 

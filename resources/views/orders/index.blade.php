@@ -18,7 +18,7 @@
     <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-800 md:overflow-x-auto">
         @if($orders->isNotEmpty())
             <div class="hidden md:block">
-                <table class="w-full min-w-[820px] text-left">
+                <table class="w-full text-left">
                 <thead class="bg-slate-50 dark:bg-slate-900/70">
                     <tr class="border-b border-slate-200 dark:border-slate-700">
                         <th class="px-4 py-3.5 text-xs font-bold uppercase tracking-wide text-slate-500 dark:text-slate-400">Order #</th>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="min-w-0">
                                 <p class="text-xs font-medium text-slate-500 dark:text-slate-400">Total</p>
-                                <p class="mt-1 break-words font-bold text-slate-900 dark:text-white">{{ number_format((float) $order->total, 2) }} TND</p>
+                                <p class="mt-1 break-words font-bold text-slate-900 dark:text-white">{{ number_format((float) $order->total, 2) }} $</p>
                             </div>
                             <div class="col-span-2 min-w-0">
                                 <p class="text-xs font-medium text-slate-500 dark:text-slate-400">Items / qty</p>
