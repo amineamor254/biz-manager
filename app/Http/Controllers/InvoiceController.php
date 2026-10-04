@@ -17,12 +17,15 @@ class InvoiceController extends Controller
 
     private const STATUSES = ['draft', 'sent', 'paid', 'overdue', 'cancelled'];
 
-    public function index()
-    {
-        $invoices = Invoice::with('client')->latest()->get();
+   
 
-        return view('invoices.index', compact('invoices'));
-    }
+        public function index()
+        {
+            $invoices = Invoice::with('client')->orderByDesc('id')->get();
+
+            return view('invoices.index', compact('invoices'));
+        }
+
 
     public function create()
     {
