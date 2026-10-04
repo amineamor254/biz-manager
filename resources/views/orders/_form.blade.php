@@ -71,7 +71,7 @@
             <div><label class="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">Product</label><select data-product required class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-white"></select></div>
             <div><label class="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">Quantity</label><input data-quantity type="number" min="1" step="1" value="1" required class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-white"></div>
             <div><label class="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">Unit price</label><input data-unit-price type="text" readonly tabindex="-1" placeholder="0.00" class="w-full cursor-not-allowed rounded-lg border border-slate-200 bg-slate-100 px-3 py-2.5 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"></div>
-            <div><span class="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">Line total</span><p data-line-total class="rounded-lg bg-white px-3 py-2.5 text-sm font-bold text-slate-900 dark:bg-slate-800 dark:text-white">0.00 TND</p></div>
+            <div><span class="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-300">Line total</span><p data-line-total class="rounded-lg bg-white px-3 py-2.5 text-sm font-bold text-slate-900 dark:bg-slate-800 dark:text-white">0.00 $</p></div>
             <button type="button" data-remove class="inline-flex h-10 items-center justify-center rounded-lg px-3 text-sm font-semibold text-red-600 transition hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950/40" aria-label="Remove item">Remove</button>
         </div>
     </div>
@@ -94,7 +94,7 @@
             const [whole, fraction = ''] = String(amount || '0').split('.');
             return (Number(whole) * 100) + Number((fraction + '00').slice(0, 2));
         };
-        const money = (value) => `${(value / 100).toFixed(2)} TND`;
+        const money = (value) => `${(value / 100).toFixed(2)} $`;
 
         function updateRows() {
             const rows = [...container.querySelectorAll('.order-item')];
@@ -111,7 +111,7 @@
 
                 select.name = `items[${index}][product_id]`;
                 quantity.name = `items[${index}][quantity]`;
-                row.querySelector('[data-unit-price]').value = price ? `${Number(price).toFixed(2)} TND` : '';
+                row.querySelector('[data-unit-price]').value = price ? `${Number(price).toFixed(2)} $` : '';
                 row.querySelector('[data-line-total]').textContent = money(lineCents);
                 totalCents += lineCents;
                 [...select.options].forEach((option) => {

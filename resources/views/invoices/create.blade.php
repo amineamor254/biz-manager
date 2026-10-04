@@ -172,7 +172,7 @@
                 </div>
                 <div class="space-y-1.5">
                     <span class="block text-sm font-medium text-gray-700 dark:text-gray-300">Line total</span>
-                    <p data-line-total class="rounded-lg bg-white px-3 py-2.5 text-sm font-bold text-gray-900 dark:bg-gray-800 dark:text-white">0.00 TND</p>
+                    <p data-line-total class="rounded-lg bg-white px-3 py-2.5 text-sm font-bold text-gray-900 dark:bg-gray-800 dark:text-white">0.00 $</p>
                 </div>
                 <button type="button" data-remove class="inline-flex h-10 items-center justify-center rounded-lg px-3 text-sm font-semibold text-red-600 transition hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-500/30 dark:text-red-400 dark:hover:bg-red-950/40" aria-label="Remove item">Remove</button>
             </div>
@@ -199,7 +199,7 @@
                 const [whole, fraction = ''] = String(amount || '0').split('.');
                 return (Number(whole) * 100) + Number((fraction + '00').slice(0, 2));
             };
-            const money = (value) => `${(value / 100).toFixed(2)} TND`;
+            const money = (value) => `${(value / 100).toFixed(2)} $`;
 
             function updateRows() {
                 const rows = [...container.querySelectorAll('.invoice-item')];

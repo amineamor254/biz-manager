@@ -46,7 +46,7 @@
                                 <td class="whitespace-nowrap px-2 py-4 lg:px-5"><a href="{{ route('invoices.show', $invoice) }}" class="text-sm font-semibold text-blue-700 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">{{ $invoice->invoice_number ?: 'INV-' . str_pad($invoice->id, 5, '0', STR_PAD_LEFT) }}</a></td>
                                 <td class="px-2 py-4 lg:px-5"><span class="text-sm font-medium text-slate-800 dark:text-slate-200">{{ $invoice->client?->name ?? 'Client unavailable' }}</span></td>
                                 <td class="whitespace-nowrap px-2 py-4 text-sm text-slate-600 dark:text-slate-300 lg:px-5">{{ $invoice->date?->format('M d, Y') ?? '—' }}</td>
-                                <td class="whitespace-nowrap px-2 py-4 text-sm font-bold text-slate-900 dark:text-white lg:px-5">{{ number_format((float) $invoice->total, 2) }} TND</td>
+                                <td class="whitespace-nowrap px-2 py-4 text-sm font-bold text-slate-900 dark:text-white lg:px-5">{{ number_format((float) $invoice->total, 2) }} $</td>
                                 <td class="px-2 py-4 lg:px-5"><span class="inline-flex rounded-full px-2.5 py-1 text-xs font-semibold {{ $statusClasses }}">{{ ucfirst($invoice->status) }}</span></td>
                                 <td class="sticky right-0 z-10 whitespace-nowrap bg-white px-2 py-4 group-hover:bg-slate-50/80 dark:bg-slate-800 dark:group-hover:bg-slate-700/30 lg:px-3">
                                    
@@ -120,7 +120,7 @@
                             </div>
                             <div class="min-w-0">
                                 <p class="text-xs font-medium text-slate-500 dark:text-slate-400">Total</p>
-                                <p class="mt-1 break-words font-bold text-slate-900 dark:text-white">{{ number_format((float) $invoice->total, 2) }} TND</p>
+                                <p class="mt-1 break-words font-bold text-slate-900 dark:text-white">{{ number_format((float) $invoice->total, 2) }} $</p>
                             </div>
                         </div>
 

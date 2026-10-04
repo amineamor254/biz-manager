@@ -45,7 +45,7 @@
                             <td class="px-4 py-4 text-sm font-medium text-slate-800 dark:text-slate-200">{{ $order->client?->name ?? 'Client unavailable' }}</td>
                             <td class="whitespace-nowrap px-4 py-4 text-sm text-slate-600 dark:text-slate-300">{{ $order->order_date->format('M d, Y') }}</td>
                             <td class="px-4 py-4 text-sm text-slate-600 dark:text-slate-300">{{ $order->items->count() }} items · {{ $order->items->sum('quantity') }} qty</td>
-                            <td class="whitespace-nowrap px-4 py-4 text-sm font-bold text-slate-900 dark:text-white">{{ number_format((float) $order->total, 2) }} TND</td>
+                            <td class="whitespace-nowrap px-4 py-4 text-sm font-bold text-slate-900 dark:text-white">{{ number_format((float) $order->total, 2) }} $</td>
                             <td class="px-4 py-4"><span class="inline-flex rounded-full px-2.5 py-1 text-xs font-semibold {{ $statusClasses }}">{{ ucfirst($order->status) }}</span></td>
                             <td class="whitespace-nowrap px-3 py-4">
                                 <div class="flex items-center justify-end gap-0.5">

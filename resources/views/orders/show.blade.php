@@ -46,8 +46,8 @@
                         <tr>
                             <td class="px-5 py-4 text-sm font-semibold text-slate-800 dark:text-slate-200">{{ $item->product?->name ?? 'Product unavailable' }}</td>
                             <td class="px-5 py-4 text-right text-sm text-slate-600 dark:text-slate-300">{{ $item->quantity }}</td>
-                            <td class="whitespace-nowrap px-5 py-4 text-right text-sm text-slate-600 dark:text-slate-300">{{ number_format((float) $item->unit_price, 2) }} TND</td>
-                            <td class="whitespace-nowrap px-5 py-4 text-right text-sm font-semibold text-slate-900 dark:text-white">{{ number_format((float) $item->total, 2) }} TND</td>
+                            <td class="whitespace-nowrap px-5 py-4 text-right text-sm text-slate-600 dark:text-slate-300">{{ number_format((float) $item->unit_price, 2) }} $</td>
+                            <td class="whitespace-nowrap px-5 py-4 text-right text-sm font-semibold text-slate-900 dark:text-white">{{ number_format((float) $item->total, 2) }} $</td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -55,7 +55,7 @@
         </div>
         <div class="flex items-center justify-between border-t border-slate-200 bg-slate-50/70 px-5 py-5 dark:border-slate-700 dark:bg-slate-900/50 sm:px-7">
             <span class="text-sm font-semibold text-slate-600 dark:text-slate-300">Grand total</span>
-            <span class="text-xl font-bold text-slate-900 dark:text-white">{{ number_format((float) $order->total, 2) }} TND</span>
+            <span class="text-xl font-bold text-slate-900 dark:text-white">{{ number_format((float) $order->total, 2) }} $</span>
         </div>
     </section>
 

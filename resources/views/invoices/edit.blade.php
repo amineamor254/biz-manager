@@ -72,7 +72,7 @@
             <div id="invoice-items" class="mt-5 space-y-3"></div>
             <div class="mt-5 flex items-center justify-between border-t border-slate-200 pt-4 dark:border-slate-700">
                 <span class="text-sm font-semibold text-slate-600 dark:text-slate-300">Invoice total</span>
-                <span id="invoice-total" class="text-xl font-bold text-slate-900 dark:text-white">0.00 TND</span>
+                <span id="invoice-total" class="text-xl font-bold text-slate-900 dark:text-white">0.00 $</span>
             </div>
         </section>
 
@@ -89,7 +89,7 @@
             <div class="space-y-1.5"><label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Product</label><select data-product required class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-white"></select><p data-stock class="text-xs text-slate-500 dark:text-slate-400">Choose a product</p></div>
             <div class="space-y-1.5"><label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Quantity</label><input data-quantity type="number" min="1" step="1" value="1" required class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-800 dark:text-white"></div>
             <div class="space-y-1.5"><label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Unit price</label><input data-unit-price type="text" readonly tabindex="-1" placeholder="0.00" class="w-full cursor-not-allowed rounded-lg border border-slate-200 bg-slate-100 px-3 py-2.5 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"></div>
-            <div class="space-y-1.5"><span class="block text-sm font-medium text-slate-700 dark:text-slate-300">Line total</span><p data-line-total class="rounded-lg bg-white px-3 py-2.5 text-sm font-bold text-slate-900 dark:bg-slate-800 dark:text-white">0.00 TND</p></div>
+            <div class="space-y-1.5"><span class="block text-sm font-medium text-slate-700 dark:text-slate-300">Line total</span><p data-line-total class="rounded-lg bg-white px-3 py-2.5 text-sm font-bold text-slate-900 dark:bg-slate-800 dark:text-white">0.00 $</p></div>
             <input data-item-id type="hidden">
             <button type="button" data-remove class="inline-flex h-10 items-center justify-center rounded-lg px-3 text-sm font-semibold text-red-600 transition hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-red-500/30 dark:text-red-400 dark:hover:bg-red-950/40" aria-label="Remove item">Remove</button>
         </div>
